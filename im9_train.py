@@ -1,5 +1,4 @@
 import torch
-import torchvision
 import glob
 import cv2
 import torch.optim as optim
@@ -25,7 +24,7 @@ print(net)
 
 # disable training for hidden layers
 for param in net.parameters():
-    param.requires_grad = True
+    param.requires_grad = False
 
 # reduce amount of features:
 num_ftrs = net.classifier[0].in_features
